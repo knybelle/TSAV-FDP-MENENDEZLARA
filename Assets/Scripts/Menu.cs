@@ -21,12 +21,16 @@ public class Menu : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.P))
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             pausa.SetActive(true);
             Time.timeScale = 0;
         }
     }
     public void Continue()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         pausa.SetActive(false);
         Time.timeScale = 1;
     }

@@ -16,6 +16,6 @@ public class Anim : MonoBehaviour
     {
         anim.SetFloat("Vertical", Input.GetAxis("Vertical"));
         anim.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        anim.SetFloat("Magnitude", gameObject.GetComponent<CharacterMovement>().move.magnitude);
+        anim.SetFloat("Magnitude", gameObject.GetComponent<PlayerMove>().movement.magnitude);
     }
 }
