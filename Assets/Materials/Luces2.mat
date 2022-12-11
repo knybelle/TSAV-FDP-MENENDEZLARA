@@ -10,7 +10,7 @@ Material:
   m_Name: Luces2
   m_Shader: {fileID: -6465566751694194690, guid: 80b16cfa4f30c6e4dade6628867c3523, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -35,6 +35,6 @@ Material:
     - Vector1_7d110ff0b5e24a22b3c0f318ddc5aca7: 3
     - Vector1_7eb92c5b39ee4936aa8f55e908e89075: 0.05
     m_Colors:
-    - Color_3825706a9eb74d9898c0de8251f974c1: {r: 0.015686275, g: 0.7647059, b: 0, a: 0}
-    - Color_84ea158f23074c588794b595d3cf367f: {r: 1, g: 0, b: 0, a: 0}
+    - Color_3825706a9eb74d9898c0de8251f974c1: {r: 0, g: 191.74902, b: 0, a: 0}
+    - Color_84ea158f23074c588794b595d3cf367f: {r: 191.74902, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

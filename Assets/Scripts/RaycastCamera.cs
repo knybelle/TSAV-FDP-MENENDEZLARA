@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RaycastCamera : MonoBehaviour
 {
@@ -9,10 +11,18 @@ public class RaycastCamera : MonoBehaviour
 
     public LayerMask interactuable;
 
+
+    public int cantidadRegalos;
+    private int contadorRegalos;
+    public Text texto;
+    public Text winScreen;
+    public float tiempoEspera;
+    public string escenaPrincipal;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -33,8 +43,23 @@ public class RaycastCamera : MonoBehaviour
             }
             else if (hit.transform.CompareTag("regalo"))
             {
-                //CODIGO ACA
+                hit.transform.gameObject.SetActive(false);
+                contadorRegalos++;
+                texto.text = contadorRegalos + " / " + cantidadRegalos;
+                if (contadorRegalos == cantidadRegalos)
+                {
+                    StartCoroutine(Win());
+                }
             }
         }
+    }
+
+    IEnumerator Win()
+    {
+        winScreen.gameObject.SetActive(true);
+        yield return new WaitForSeconds(tiempoEspera);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneManager.LoadScene(escenaPrincipal);
     }
 }
